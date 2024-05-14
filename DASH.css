@@ -1,0 +1,307 @@
+/* CÓDIGO FEITO POR Rodrigo Boscariol, o tal do CHICO BENTO*/
+
+/* Não seja vacilão, não modifique ou use como base flw */
+
+/* BODY  */
+#dashmtherfucker {
+  width: 445px;
+  max-height: fit-content;
+  padding-bottom: 15px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.dash-header {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 0px;
+  flex-wrap: wrap;
+  max-width: 400px;
+  align-items: flex-end;
+}
+
+.dash-header-foot {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 5px 20px;
+  flex-wrap: wrap;
+  max-width: 400px;
+}
+
+.dash-title {
+  width: fit-content;
+  padding: 15px 0px 0px 0px;
+}
+
+.dash-main-title {
+  font-family: "Hit me, punk! 01", sans-serif;
+  font-size: 60px;
+  text-align: right;
+  color: white;
+  text-transform: uppercase;
+  mix-blend-mode: lighten;
+}
+
+.dash-subtitle {
+  font: 8px Tahoma;
+  text-transform: uppercase;
+  text-align: right;
+  color: white;
+  width: fit-content;
+  padding: 0px 0px 5px 0px;
+}
+
+.dash-content {
+  background-color: #faf9f6;
+  width: 370px;
+  max-height: 400px;
+  padding: 15px;
+  outline: 1px double #101010;
+  outline-offset: -10px;
+
+  margin-bottom: 5px;
+  transition: 2s;
+}
+
+.dash-content-text {
+  max-height: 390px;
+  padding: 5px;
+  line-height: 155%;
+  text-align: justify;
+  font: 11px tahoma;
+  hyphens: auto;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.dash-content-text b {
+  font-family: "Staatliches", sans-serif;
+  line-height: 155%;
+  background-color: var(--accent);
+  color: var(--sec);
+}
+
+.dash-footer {
+  font: 8px Tahoma;
+  color: black;
+  text-transform: uppercase;
+  min-width: 35px;
+  padding: 5px 5px;
+  margin: 0px 5px;
+  background: #faf9f6;
+  border: 1px solid transparent;
+  outline: 1px double #101010;
+  outline-offset: -5px;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.dash-footer:hover {
+  background: #121212;
+  color: #faf9f6;
+  border: 1px solid #faf9f6;
+}
+
+.dash-footer:first-child {
+  margin-right: 0;
+}
+
+/*BARRA*/
+
+/* Works on Chrome, Edge, and Safari */
+#dashmtherfucker ::-webkit-scrollbar {
+  background-color: #faf9f6;
+  height: 4px;
+  width: 5px;
+}
+
+#dashmtherfucker ::-webkit-scrollbar-thumb {
+  border: 1px solid #101010;
+}
+
+/* Checkbox Area*/
+
+#dashmtherfucker #checkbox {
+  position: absolute;
+  top: 100px;
+  left: 17px;
+  cursor: pointer;
+}
+
+/* Estilo para quando o checkbox está marcado */
+#dashmtherfucker #checkbox:checked + label + .checkbox-tooltip {
+  opacity: 0;
+  transition: opacity 2s;
+  pointer-events: none;
+}
+
+/* Estilo para o conteúdo quando o checkbox está marcado */
+#dashmtherfucker #checkbox:checked + label + .checkbox-tooltip + .dash-content {
+  background-color: #121212;
+  color: #faf9f6;
+  outline: 1px double #faf9f6;
+}
+
+/* Estilização opcional do tooltip */
+
+#dashmtherfucker .checkbox-tooltip {
+  position: absolute;
+  top: 102px;
+  left: calc(39px);
+  background-color: #121212;
+  padding: 2px;
+  border: 1px solid #faf9f6;
+  font-family: tahoma;
+  font-size: 6px;
+  text-transform: uppercase;
+  color: white;
+  opacity: 1;
+  transition: opacity 10s;
+}
+
+#dashmtherfucker .checkbox-tooltip::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #ccc transparent transparent;
+  transform: translateY(-50%);
+  transition: 1s;
+}
+
+@import url(https://db.onlinewebfonts.com/c/4d2c7c465d97d61b511c2b05e06b7b0b?family=Hit+me%2C+punk%21+01);
+
+@font-face {
+  font-family: "Hit me, punk! 01";
+  src: url("https://db.onlinewebfonts.com/t/4d2c7c465d97d61b511c2b05e06b7b0b.eot");
+  src: url("https://db.onlinewebfonts.com/t/4d2c7c465d97d61b511c2b05e06b7b0b.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/4d2c7c465d97d61b511c2b05e06b7b0b.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/4d2c7c465d97d61b511c2b05e06b7b0b.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/4d2c7c465d97d61b511c2b05e06b7b0b.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/4d2c7c465d97d61b511c2b05e06b7b0b.svg#Hit me, punk! 01")
+      format("svg");
+}
+
+/* setup tooltips */
+/* START TOOLTIP STYLES */
+#dashmtherfucker [tooltip] {
+  position: relative;
+  /* opinion 1 */
+}
+
+/* Applies to all tooltips */
+#dashmtherfucker [tooltip]::before,
+#dashmtherfucker [tooltip]::after {
+  text-transform: uppercase;
+  /* opinion 2 */
+  font-size: 8px;
+  /* opinion 3 */
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  display: none;
+  opacity: 0;
+}
+
+#dashmtherfucker [tooltip]::before {
+  content: "";
+  border: 5px solid transparent;
+  /* opinion 4 */
+  z-index: 1001;
+  /* absurdity 1 */
+}
+
+#dashmtherfucker [tooltip]::after {
+  content: attr(tooltip);}
+  /* magic! */
+
+  /* most of the rest of this is opinion */
+  font-family: tahoma, sans-serif;
+  text-align: center;
+
+  /*
+    Let the content set the size of the tooltips
+    but this will also keep them from being obnoxious
+  */
+  {  min-width: fit-content;
+  max-width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 1ch 1.5ch;
+  box-shadow: 0 1em 2em -0.5em rgba(0, 0, 0, 0.35);
+  background: #121212;
+  border: 1px solid #faf9f6;
+  color: #faf9f6;
+  z-index: 1000;
+  /* absurdity 2 */
+}
+
+/* Make the tooltips respond to hover */
+#dashmtherfucker [tooltip]:hover::before,
+#dashmtherfucker [tooltip]:hover::after {
+  display: block;
+}
+
+/* don't show empty tooltips */
+#dashmtherfucker [tooltip=""]::before,
+#dashmtherfucker [tooltip=""]::after {
+  display: none !important;
+}
+
+/* FLOW: DOWN */
+#dashmtherfucker [tooltip][flow^="down"]::before {
+  top: 100%;
+  border-top-width: 0;
+  border-bottom-color: #faf9f6;
+}
+
+#dashmtherfucker [tooltip][flow^="down"]::after {
+  top: calc(100% + 5px);
+}
+
+#dashmtherfucker [tooltip][flow^="down"]::before,
+#dashmtherfucker [tooltip][flow^="down"]::after {
+  left: 50%;
+  transform: translate(-50%, 0.5em);
+}
+
+/* KEYFRAMES */
+@keyframes tooltips-vert {
+  to {
+    opacity: 0.9;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes tooltips-horz {
+  to {
+    opacity: 0.9;
+    transform: translate(0, -50%);
+  }
+}
+
+/* FX All The Things */
+#dashmtherfucker [tooltip]:not([flow]):hover::before,
+#dashmtherfucker [tooltip]:not([flow]):hover::after,
+#dashmtherfucker [tooltip][flow^="up"]:hover::before,
+#dashmtherfucker [tooltip][flow^="up"]:hover::after,
+#dashmtherfucker [tooltip][flow^="down"]:hover::before,
+#dashmtherfucker [tooltip][flow^="down"]:hover::after {
+  animation: tooltips-vert 300ms ease-out forwards;
+}
+
+#dashmtherfucker [tooltip][flow^="left"]:hover::before,
+#dashmtherfucker [tooltip][flow^="left"]:hover::after,
+#dashmtherfucker [tooltip][flow^="right"]:hover::before,
+#dashmtherfucker [tooltip][flow^="right"]:hover::after {
+  animation: tooltips-horz 300ms ease-out forwards;
+}
